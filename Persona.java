@@ -1,3 +1,5 @@
+package C01_ISO2.E1_C01;
+
 public class Persona {
 	private boolean sana;
 	private boolean sintomas;
@@ -65,3 +67,4 @@ public class Persona {
 		this.cartilla_vacunacion = cartilla_vacunacion;
 	}
 }
+

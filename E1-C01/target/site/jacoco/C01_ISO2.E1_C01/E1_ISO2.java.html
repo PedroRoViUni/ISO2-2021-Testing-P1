@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>E1_ISO2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">E1-C01</a> &gt; <a href="index.source.html" class="el_package">C01_ISO2.E1_C01</a> &gt; <span class="el_source">E1_ISO2.java</span></div><h1>E1_ISO2.java</h1><pre class="source lang-java linenums">package C01_ISO2.E1_C01;
+
+<span class="nc" id="L3">public class E1_ISO2 {</span>
+	public static void main(String [] args) {
+<span class="nc" id="L5">		Persona a1 = new Persona(true, false, false, true, true);</span>
+<span class="nc" id="L6">		Persona a2 = new Persona(true, true, true, true, true);</span>
+<span class="nc" id="L7">		Persona a3 = new Persona(true, false, false, true, false);</span>
+<span class="nc" id="L8">		Persona a4 = new Persona(true, false, false, false, true);</span>
+<span class="nc" id="L9">		Persona a5 = new Persona(false, false, false, true, true);</span>
+		
+<span class="nc" id="L11">		realizarActividad(12, 12, &quot;Nieve&quot;, a1);</span>
+<span class="nc" id="L12">		realizarActividad(17, 32, &quot;Nieve&quot;, a2);</span>
+<span class="nc" id="L13">		realizarActividad(28, 30, &quot;Granizo&quot;, a3);</span>
+<span class="nc" id="L14">		realizarActividad(35, 70, &quot;Niebla&quot;, a4);</span>
+<span class="nc" id="L15">		realizarActividad(-14, 12, &quot;Granizo&quot;, a5);</span>
+		
+<span class="nc" id="L17">		realizarActividad(16, 20, &quot;Nieve&quot;, a1);</span>
+<span class="nc" id="L18">		realizarActividad(-2, 12, &quot;Granizo&quot;, a1);</span>
+<span class="nc" id="L19">		realizarActividad(32, 15, &quot;Nieve&quot;, a1);</span>
+<span class="nc" id="L20">		realizarActividad(35, 15, &quot;Granizo&quot;, a1);</span>
+<span class="nc" id="L21">		realizarActividad(-5, 14, &quot;Lluvia&quot;, a1);</span>
+				
+<span class="nc" id="L23">	}</span>
+	
+	public static void realizarActividad(int temperatura, double humedad, String precipitacion, Persona p) {
+<span class="nc" id="L26">		boolean aforo_estacion = false , aforo_ruta = false, aforo_confinamiento = false, aforo_bar = false, aforo_piscina = false, hacesAlgo = false;</span>
+		
+<span class="nc bnc" id="L28" title="All 10 branches missed.">		if (p.isSana() &amp;&amp; !p.isSintomas() &amp;&amp; !p.isContacto() &amp;&amp; p.isPasado_Covid() &amp;&amp; p.isCartilla_vacunacion()) {</span>
+<span class="nc bnc" id="L29" title="All 10 branches missed.">			if (temperatura &lt; 0 &amp;&amp; humedad &lt; 15.0 &amp;&amp; precipitacion != &quot;Lluvia&quot; &amp;&amp; precipitacion != &quot;Nieve&quot; &amp;&amp; !aforo_estacion) {</span>
+<span class="nc" id="L30">				System.out.println(&quot;Se puede ir a esquiar&quot;);</span>
+<span class="nc" id="L31">				hacesAlgo = true;</span>
+			}
+			
+<span class="nc bnc" id="L34" title="All 8 branches missed.">			if (temperatura &gt; 0 &amp;&amp; temperatura &lt;= 15 &amp;&amp; precipitacion != &quot;Lluvia&quot; &amp;&amp; !aforo_ruta) {</span>
+<span class="nc" id="L35">				System.out.println(&quot;Es posible hacer senderismo&quot;);</span>
+<span class="nc" id="L36">				hacesAlgo = true;</span>
+			}
+			
+<span class="nc bnc" id="L39" title="All 10 branches missed.">			if (temperatura &gt; 15 &amp;&amp; temperatura &lt;= 25 &amp;&amp; precipitacion != &quot;Lluvia&quot; &amp;&amp; humedad &lt; 60.0 &amp;&amp; !aforo_confinamiento) {</span>
+<span class="nc" id="L40">				System.out.println(&quot;Se puede hacer turismo al aire libre&quot;);</span>
+<span class="nc" id="L41">				hacesAlgo = true;</span>
+			}
+			
+<span class="nc bnc" id="L44" title="All 8 branches missed.">			if (temperatura &gt; 25 &amp;&amp; temperatura &lt;= 35 &amp;&amp; precipitacion != &quot;Lluvia&quot; &amp;&amp; !aforo_bar) {</span>
+<span class="nc" id="L45">				System.out.println(&quot;Se puede ir de cañas&quot;);</span>
+<span class="nc" id="L46">				hacesAlgo = true;</span>
+			}
+			
+<span class="nc bnc" id="L49" title="All 4 branches missed.">			if (temperatura &gt; 30 &amp;&amp; precipitacion != &quot;Lluvia&quot;) {</span>
+<span class="nc" id="L50">				System.out.println(&quot;Se puede ir a la playa&quot;);</span>
+<span class="nc" id="L51">				hacesAlgo = true;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">				if (!aforo_piscina) {</span>
+<span class="nc" id="L53">					System.out.println(&quot;Se puede ir a la piscina&quot;);</span>
+				}
+			}
+			
+<span class="nc bnc" id="L57" title="All 8 branches missed.">			if (temperatura &lt; 0 &amp;&amp; humedad &lt; 15.0 &amp;&amp; (precipitacion == &quot;Lluvia&quot; || precipitacion == &quot;Nieve&quot;)) {</span>
+<span class="nc" id="L58">				System.out.println(&quot;Lo mejor es quedarse en casa&quot;);</span>
+<span class="nc" id="L59">				hacesAlgo = true;</span>
+				
+			}
+			
+<span class="nc bnc" id="L63" title="All 2 branches missed.">			if (!hacesAlgo) {</span>
+<span class="nc" id="L64">				System.out.println(&quot;No se recomienda hacer ninguna actividad&quot;);</span>
+			}
+		} else {
+<span class="nc" id="L67">			System.out.println(&quot;No puedes realizar ninguna actividad&quot;);</span>
+		}
+<span class="nc" id="L69">	}</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

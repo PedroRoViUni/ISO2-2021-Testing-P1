@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Persona.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">E1-C01</a> &gt; <a href="index.source.html" class="el_package">C01_ISO2.E1_C01</a> &gt; <span class="el_source">Persona.java</span></div><h1>Persona.java</h1><pre class="source lang-java linenums">package C01_ISO2.E1_C01;
+
+public class Persona {
+	private boolean sana;
+	private boolean sintomas;
+	private boolean contacto;
+	private boolean pasado_Covid;
+	private boolean cartilla_vacunacion;
+	
+	
+	public Persona (boolean sana, boolean sintomas, boolean contacto, boolean pasado_Covid, boolean cartilla_vacunacion) {
+<span class="fc" id="L12">		super();</span>
+<span class="fc" id="L13">		this.sana = sana;</span>
+<span class="fc" id="L14">		this.sintomas = sintomas;</span>
+<span class="fc" id="L15">		this.contacto = contacto;</span>
+<span class="fc" id="L16">		this.pasado_Covid = pasado_Covid;</span>
+<span class="fc" id="L17">		this.cartilla_vacunacion = cartilla_vacunacion;</span>
+<span class="fc" id="L18">	}</span>
+
+
+	public boolean isSana() {
+<span class="fc" id="L22">		return sana;</span>
+	}
+
+
+	public void setSana(boolean sana) {
+<span class="nc" id="L27">		this.sana = sana;</span>
+<span class="nc" id="L28">	}</span>
+
+
+	public boolean isSintomas() {
+<span class="fc" id="L32">		return sintomas;</span>
+	}
+
+
+	public void setSintomas(boolean sintomas) {
+<span class="nc" id="L37">		this.sintomas = sintomas;</span>
+<span class="nc" id="L38">	}</span>
+
+
+	public boolean isContacto() {
+<span class="fc" id="L42">		return contacto;</span>
+	}
+
+
+	public void setContacto(boolean contacto) {
+<span class="nc" id="L47">		this.contacto = contacto;</span>
+<span class="nc" id="L48">	}</span>
+
+
+	public boolean isPasado_Covid() {
+<span class="fc" id="L52">		return pasado_Covid;</span>
+	}
+
+
+	public void setPasado_Covid(boolean pasado_Covid) {
+<span class="nc" id="L57">		this.pasado_Covid = pasado_Covid;</span>
+<span class="nc" id="L58">	}</span>
+
+
+	public boolean isCartilla_vacunacion() {
+<span class="fc" id="L62">		return cartilla_vacunacion;</span>
+	}
+
+
+	public void setCartilla_vacunacion(boolean cartilla_vacunacion) {
+<span class="nc" id="L67">		this.cartilla_vacunacion = cartilla_vacunacion;</span>
+<span class="nc" id="L68">	}</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
